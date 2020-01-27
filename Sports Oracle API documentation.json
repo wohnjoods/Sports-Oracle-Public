@@ -1,0 +1,531 @@
+{
+	"info": {
+		"_postman_id": "cbf7af94-4ed7-4b5c-a914-6f01b5580a9c",
+		"name": "Sports Oracle API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ncaab",
+			"item": [
+				{
+					"name": "schedule/<date>",
+					"item": [
+						{
+							"name": "Return all game info from schedule DB for a given date",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ncaab/schedule/<date>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ncaab",
+										"schedule",
+										"<date>"
+									],
+									"variable": [
+										{
+											"id": "7a401e2b-c8f0-47b6-b0f1-f0d434f1a199",
+											"key": "date",
+											"value": "<string>",
+											"type": "string",
+											"description": {
+												"content": "The date of the games schedule data you want to retrieve",
+												"type": "text/plain"
+											}
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Expected response to a valid request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ncaab/schedule/<date>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ncaab",
+												"schedule",
+												"<date>"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Return specific game info from schedule DB",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ncaab/schedule/<date>/<HTeamID>/<RTeamID>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ncaab",
+										"schedule",
+										"<date>",
+										"<HTeamID>",
+										"<RTeamID>"
+									],
+									"variable": [
+										{
+											"id": "661a8fe4-38bf-4c36-9dfa-28a82dc162b2",
+											"key": "date",
+											"value": "<string>",
+											"type": "string",
+											"description": {
+												"content": "The date of the games schedule data you want to retrieve",
+												"type": "text/plain"
+											}
+										},
+										{
+											"id": "e8b14b39-be89-4090-85e0-905188fb908d",
+											"key": "HTeamID",
+											"value": "<int>",
+											"type": "string",
+											"description": {
+												"content": "The ID for the Home Team",
+												"type": "text/plain"
+											}
+										},
+										{
+											"id": "6376828e-117d-4b75-953d-181188e6286f",
+											"key": "RTeamID",
+											"value": "<int>",
+											"type": "string",
+											"description": {
+												"content": "The ID for the Away Team",
+												"type": "text/plain"
+											}
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Expected response to a valid request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ncaab/schedule/<date>/<HTeamID>/<RTeamID>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ncaab",
+												"schedule",
+												"<date>",
+												"<HTeamID>",
+												"<RTeamID>"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Return all boxscore data for a given date",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/ncaab/boxscores/<date>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ncaab",
+								"boxscores",
+								"<date>"
+							],
+							"variable": [
+								{
+									"id": "c16f4e93-7acb-4122-a123-11d7ec8963b2",
+									"key": "date",
+									"value": "<string>",
+									"type": "string",
+									"description": {
+										"content": "The date of the games boxscore data you want to retrieve",
+										"type": "text/plain"
+									}
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Expected response to a valid request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ncaab/boxscores/<date>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ncaab",
+										"boxscores",
+										"<date>"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Return model inputs for a specific game",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/ncaab/model/inputs/<date>/<ATeamID>/<BTeamID>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ncaab",
+								"model",
+								"inputs",
+								"<date>",
+								"<ATeamID>",
+								"<BTeamID>"
+							],
+							"variable": [
+								{
+									"id": "4f9b1e99-46da-4414-8989-7d3c5792ab03",
+									"key": "date",
+									"value": "<string>",
+									"type": "string",
+									"description": {
+										"content": "The date of the games schedule data you want to retrieve",
+										"type": "text/plain"
+									}
+								},
+								{
+									"id": "86701e87-a61e-4d3e-84ca-96800c9fa515",
+									"key": "ATeamID",
+									"value": "<int>",
+									"type": "string",
+									"description": {
+										"content": "The ID for team A, same as HTeamID as of rn",
+										"type": "text/plain"
+									}
+								},
+								{
+									"id": "615d1452-aa4b-42ef-b022-2f13c31d1f6a",
+									"key": "BTeamID",
+									"value": "<int>",
+									"type": "string",
+									"description": {
+										"content": "The ID for team B same as RTeamID as of rn",
+										"type": "text/plain"
+									}
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Expected response to a valid request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ncaab/model/inputs/<date>/<ATeamID>/<BTeamID>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ncaab",
+										"model",
+										"inputs",
+										"<date>",
+										"<ATeamID>",
+										"<BTeamID>"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Return spread model outputs for a specific game",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/ncaab/spread/outputs/<date>/<ATeamID>/<BTeamID>/<line>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ncaab",
+								"spread",
+								"outputs",
+								"<date>",
+								"<ATeamID>",
+								"<BTeamID>",
+								"<line>"
+							],
+							"variable": [
+								{
+									"id": "25827c54-3da1-49ef-acf0-e4678988c84b",
+									"key": "date",
+									"value": "<string>",
+									"type": "string",
+									"description": {
+										"content": "The date of the games schedule data you want to retrieve",
+										"type": "text/plain"
+									}
+								},
+								{
+									"id": "f00e8f86-02a5-44bd-a427-43cd90613f2b",
+									"key": "ATeamID",
+									"value": "<int>",
+									"type": "string",
+									"description": {
+										"content": "The ID for team A, same as HTeamID as of rn",
+										"type": "text/plain"
+									}
+								},
+								{
+									"id": "d52fce19-bac6-400b-9a14-41e221e0b1ae",
+									"key": "BTeamID",
+									"value": "<int>",
+									"type": "string",
+									"description": {
+										"content": "The ID for team B same as RTeamID as of rn",
+										"type": "text/plain"
+									}
+								},
+								{
+									"id": "ba960644-0746-44b4-a4f5-6a7cdb89845a",
+									"key": "line",
+									"value": "<int>",
+									"type": "string",
+									"description": {
+										"content": "The betting line for the game relative to team A",
+										"type": "text/plain"
+									}
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Expected response to a valid request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ncaab/spread/outputs/<date>/<ATeamID>/<BTeamID>/<line>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ncaab",
+										"spread",
+										"outputs",
+										"<date>",
+										"<ATeamID>",
+										"<BTeamID>",
+										"<line>"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Return win model outputs for a specific game",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/ncaab/win/outputs/<date>/<ATeamID>/<BTeamID>/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ncaab",
+								"win",
+								"outputs",
+								"<date>",
+								"<ATeamID>",
+								"<BTeamID>",
+								""
+							],
+							"variable": [
+								{
+									"id": "c2af8611-cc79-443e-8277-cc1ed4b11aba",
+									"key": "date",
+									"value": "<string>",
+									"type": "string",
+									"description": {
+										"content": "The date of the games schedule data you want to retrieve",
+										"type": "text/plain"
+									}
+								},
+								{
+									"id": "9817a380-cff0-481c-915f-2afae282c10c",
+									"key": "ATeamID",
+									"value": "<int>",
+									"type": "string",
+									"description": {
+										"content": "The ID for team A, same as HTeamID as of rn",
+										"type": "text/plain"
+									}
+								},
+								{
+									"id": "7defdd76-1e06-4611-9bd5-48d16aba5583",
+									"key": "BTeamID",
+									"value": "<int>",
+									"type": "string",
+									"description": {
+										"content": "The ID for team B same as RTeamID as of rn",
+										"type": "text/plain"
+									}
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Expected response to a valid request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ncaab/win/outputs/<date>/<ATeamID>/<BTeamID>/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ncaab",
+										"win",
+										"outputs",
+										"<date>",
+										"<ATeamID>",
+										"<BTeamID>",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"variable": [
+		{
+			"id": "baseUrl",
+			"key": "baseUrl",
+			"value": "{{baseURL}}",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
